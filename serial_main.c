@@ -14,7 +14,8 @@
 int main() {
     
     FILE *file;
-    file = fopen("input.txt", "r");
+    //input file has to be in the same dir as the bin, so pwd would be /aes/bin
+    file = fopen("../input.txt", "r");
 
     if (file == NULL) {
         perror("Error opening file");
@@ -62,10 +63,10 @@ int main() {
     printf("Time taken to encrypt %d bytes: %f seconds\n", input_size, time_taken);
 
 
-/*  For testing small inputs:
-        printf("Encrypted:\n");
-        Print_Text(input, input_size);
- */
+//  For testing small inputs:
+        // printf("Encrypted:\n");
+        // Print_Text(input, input_size);
+
 
     // start_time = clock();
 	// AES256_decrypt(input, input_size);	
